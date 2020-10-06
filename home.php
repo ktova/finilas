@@ -1,3 +1,18 @@
+<?php
+
+/*
+ * Test API Pole Emploi
+ */
+
+$creds = parse_ini_file("../bin/api.ini", true);
+print_r($creds['id']);
+
+function generate_access_token(){
+
+}
+
+?>
+
 <form id="test" name="test_pe" method="get"> <!-- Choisir la méthode POST ou GET -->
   <div class="formdiv">
    <label for="valeur">Entrer la valeur</label>
