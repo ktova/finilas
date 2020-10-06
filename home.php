@@ -42,6 +42,7 @@ function generate_access_token($id, $secret){
 
 // Request data
 $otoken = generate_access_token($creds['id'], $creds['secret']);
+$authlist = json_decode($otoken,true);
 
 ?>
 
@@ -54,4 +55,4 @@ $otoken = generate_access_token($creds['id'], $creds['secret']);
 </form>
 <hr>
 
-<?= json_decode($otoken,true) ?>
+<?= $authlist ?>
