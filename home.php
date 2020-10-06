@@ -35,7 +35,7 @@ function generate_access_token($id, $secret){
     // Return response
     curl_setopt($ch, CURLOPT_TIMEOUT, 10);
     $authToken = curl_exec($ch);
-    curl_close($curl);
+    curl_close($ch);
     return $authToken;
 
 }
