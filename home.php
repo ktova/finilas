@@ -54,4 +54,4 @@ $otoken = generate_access_token($creds['id'], $creds['secret']);
 </form>
 <hr>
 
-<?= $otoken['access_token'] ?>
+<?= $otoken->access_token ?>
