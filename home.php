@@ -53,5 +53,3 @@ $otoken = generate_access_token($creds['id'], $creds['secret']);
   </div>
 </form>
 <hr>
-
-<?= $otoken->access_token ?>
