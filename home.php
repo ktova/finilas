@@ -14,7 +14,7 @@ function generate_access_token($id, $secret){
 
     $ch = curl_init();
     $headers = array('Content-Type: application/x-www-form-urlencoded');
-    $body = '{"grant_tye": "client_credentials", "client_id": "'.$id.'", "client_secret": "'.$secret.'", "scope": "application_'.$id.'%20api_finilas"}';
+    $body = '{"grant_type": "client_credentials", "client_id": "'.$id.'", "client_secret": "'.$secret.'", "scope": "application_'.$id.'%20api_finilas"}';
     
     curl_setopt($ch, CURLOPT_URL, 'https://entreprise.pole-emploi.fr/connexion/oauth2/access_token');
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
