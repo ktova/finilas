@@ -5,7 +5,6 @@
  */
 
 $creds = parse_ini_file("../bin/api.ini", true);
-print_r($creds['id']);
 
 function generate_access_token(){
 
