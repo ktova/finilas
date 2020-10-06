@@ -19,7 +19,7 @@ function generate_access_token($id, $secret){
         'grant_type' => 'client_credentials',
         'client_id' => $id,
         'client_secret' => $secret,
-        'scope' => 'application_'.$id.'%20api_finilas'
+        'scope' => 'application_'.$id.' 20api_finilas'
     ];
     $body = http_build_query($fields);
 
