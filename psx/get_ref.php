@@ -11,7 +11,7 @@
         $body = http_build_query($fields);
     
         curl_setopt($ch, CURLOPT_URL, 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/referentiel/naturesContrats');
-        curl_setopt($ch, CURLOPT_POST, false);
+        curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_HEADER, 0);
     
