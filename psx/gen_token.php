@@ -5,7 +5,6 @@ function generate_access_token($id, $secret){
 
     $ch = curl_init();
     $headers = array('Content-Type: application/x-www-form-urlencoded');
-    //$body = '{"grant_type": "client_credentials", "client_id": "'.$id.'", "client_secret": "'.$secret.'", "scope": "application_'.$id.'%20api_finilas"}';
     $fields = [
         'grant_type' => 'client_credentials',
         'client_id' => $id,

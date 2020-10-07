@@ -4,7 +4,7 @@
     function generate_referentiel($access_token){
 
         $ch = curl_init();
-        $headers = array('Content-Type: application/json','Athorization: Bearer '.$access_token.'');
+        $headers = array('Content-Type: application/json','Athorization: '.$access_token.'');
         //$fields = [
         //    'Authorization' => 'Bearer '.$access_token.''
         //];
