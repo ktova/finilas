@@ -26,9 +26,9 @@ echo '--- <br>';
 $response = $client->request('GET', 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search', [
   'headers' => [
       'Content-Type' => 'application/json',
-      'Accept'     => 'application/json',
+      'Accept' => 'application/json',
       'Authorization' => ['Bearer',$access_response->access_token],
-      'scope'      => ['api_offresdemploiv2', 'application_'.$access_response->scope.'']
+      'scopes' => ['api_offresdemploiv2', 'application_'.$access_response->scope.'']
   ]
 ]);
 
