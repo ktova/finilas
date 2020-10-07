@@ -7,7 +7,7 @@
         $headers = array(
             'Content-Type: application/json',
             'Accept: application/json',
-            'Authorization: Bearer '.$access_token.''
+            //'Authorization: Bearer '.$access_token.''
         );
 
         // url modelization
@@ -24,6 +24,7 @@
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         $search_results = curl_exec($ch);
         print_r($ch);
+        echo '--- <br>';
         curl_close($ch);
         return $search_results;
     
