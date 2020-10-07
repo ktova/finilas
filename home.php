@@ -13,11 +13,11 @@ include('psx/gen_token.php');
 include('psx/get_ref.php');
 
 // Request data
-$access_token = generate_access_token($creds['id'], $creds['secret']);
-$referentiel = generate_referentiel($access_token);
+$access_response = generate_access_token($creds['id'], $creds['secret']);
+//$referentiel = generate_referentiel($access_token);
 
 print_r('acf: ' . $access_token);
-print_r($referentiel);
+//print_r($referentiel);
 
 ?>
 
