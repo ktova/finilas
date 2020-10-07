@@ -23,7 +23,7 @@ echo '--- <br>';
 //print_r($search_result);
 
 // DEBUG
-$response = $client->request('GET', 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique', [
+$response = $client->request('GET', 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique&commune=51069,76322,46083,12172,28117&origineOffre=2', [
   'headers' => [
       'Content-Type' => 'application/json',
       'Accept'     => 'application/json',
