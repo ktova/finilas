@@ -14,10 +14,11 @@ include('psx/search.php');
 
 // Request data
 $access_response = json_decode(generate_access_token($creds['id'], $creds['secret']));
-//$referentiel = generate_referentiel($access_response->access_token);
+$search_result = json_decode(global_search_query($access_response->access_token));
 
 print_r($access_response->access_token);
 echo '--- <br>';
+print_r($search_result);
 
 ?>
 
