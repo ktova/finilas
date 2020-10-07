@@ -1,5 +1,15 @@
 <?php
 
+// Require composer's autoloader
+require '../vendor/autoload.php';
+use GuzzleHttp\Client;
+
+// Setup Guzzle client
+$client = new Client([
+  // Base URI is used with relative requests
+  'base_uri' => 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/',
+]);
+
 // Generate access token
 function generate_access_token($id, $secret){
 

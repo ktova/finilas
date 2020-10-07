@@ -8,6 +8,12 @@
 require '../vendor/autoload.php';
 use GuzzleHttp\Client;
 
+// Setup Guzzle client
+$client = new Client([
+  // Base URI is used with relative requests
+  'base_uri' => 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/',
+]);
+
 // API Creds
 $creds = parse_ini_file("../bin/api.ini", true);
 
