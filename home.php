@@ -4,6 +4,10 @@
  * Test API Pole Emploi
  */
 
+// Require composer's autoloader
+require 'vendor/autoload.php';
+use GuzzleHttp\Client;
+
 // API Creds
 $creds = parse_ini_file("../bin/api.ini", true);
 
