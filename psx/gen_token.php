@@ -3,7 +3,7 @@
 // Require composer's autoloader
 require '../vendor/autoload.php';
 use GuzzleHttp\Client;
-//use GuzzleHttp\RequestOptions::HEADERS;
+use GuzzleHttp\Exception\RequestException;
 
 // Setup Guzzle client
 $client = new Client([
