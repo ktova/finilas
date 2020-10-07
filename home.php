@@ -4,33 +4,35 @@
  * Test API Pole Emploi
  */
 
-// Require composer's autoloader
-require '../vendor/autoload.php';
-use GuzzleHttp\Client;
-
-// Setup Guzzle client
-$client = new Client([
-  // Base URI is used with relative requests
-  'base_uri' => 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/',
-]);
-
 // API Creds
 $creds = parse_ini_file("../bin/api.ini", true);
 
 // DB Creds
 
 include('psx/gen_token.php');
-include('psx/search.php');
+//include('psx/search.php');
 
 // Request data
 $access_response = json_decode(generate_access_token($creds['id'], $creds['secret']));
-$search_result = json_decode(global_search_query($access_response->access_token, $access_response->scope));
+//$search_result = json_decode(global_search_query($access_response->access_token, $access_response->scope));
 
 print_r($access_response);
 echo '--- <br>';
 print_r($access_response->access_token);
 echo '--- <br>';
-print_r($search_result);
+//print_r($search_result);
+
+// DEBUG
+$response = $client->request('GET', 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique', [
+  'headers' => [
+      'Content-Type' => 'application/json',
+      'Accept'     => 'application/json',
+      'Authorization' => ['Bearer',$access_response->access_token],
+      'scope'      => ['api_offresdemploiv2', 'application_'.$access_response->scope.'']
+  ]
+]);
+
+print_r($response->getStatusCode());
 
 ?>
 
