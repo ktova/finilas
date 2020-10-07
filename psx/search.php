@@ -3,11 +3,12 @@
     // Get Ressources from API
     function global_search_query($access_token){
 
+        print_r('Authorization: '.$access_token.'');
         $sh = curl_init();
         $headers = array(
             'Authorization: '.$access_token.'',
-            'Content-Type: application/json',
-            'Accept: application/json'
+            //'Content-Type: application/json',
+            //'Accept: application/json'
         );
 
         // url modelization
