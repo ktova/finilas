@@ -7,7 +7,7 @@
         $headers = [
             'Content-Type: application/json',
             'Accept: application/json',
-            'Authorization: Bearer '.$access_token.'',
+            'Authorization: '.$access_token.'',
             'scope : api_offresdemploiv2',
             'scope : application_'.$scope.''
         ];
