@@ -14,7 +14,7 @@ include('psx/search.php');
 
 // Request data
 $access_response = json_decode(generate_access_token($creds['id'], $creds['secret']));
-$search_result = json_decode(global_search_query($access_response->access_token));
+$search_result = json_decode(global_search_query($access_response->access_token, $access_response->scope));
 
 print_r($access_response);
 echo '--- <br>';

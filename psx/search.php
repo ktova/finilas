@@ -1,11 +1,12 @@
 <?php
 
     // Get Ressources from API
-    function global_search_query($access_token){
+    function global_search_query($access_token, $scope){
 
         $sh = curl_init();
         $headers = array(
             'Authorization: '.$access_token.'',
+            'scope : application_'.$scope.''
             //'Content-Type: application/json',
             //'Accept: application/json'
         );
@@ -17,6 +18,7 @@
         curl_setopt($sh, CURLOPT_URL, $url);
         curl_setopt($sh, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($sh, CURLOPT_HEADER, 0);
+        curl_setopt($sh, CURL_HTTPGET, true);
     
         curl_setopt($sh, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($sh, CURLOPT_FOLLOWLOCATION, true);
