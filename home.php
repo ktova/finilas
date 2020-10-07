@@ -10,7 +10,7 @@ $creds = parse_ini_file("../bin/api.ini", true);
 // DB Creds
 
 include('psx/gen_token.php');
-include('psx/gen_ref.php');
+include('psx/get_ref.php');
 
 // Request data
 $access_token = generate_access_token($creds['id'], $creds['secret']);
