@@ -5,7 +5,7 @@
  */
 
 // Require composer's autoloader
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 use GuzzleHttp\Client;
 
 // API Creds
