@@ -4,21 +4,21 @@
     function global_search_query($access_token, $scope){
 
         $sh = curl_init();
-        $headers = array(
-            'Authorization: '.$access_token.'',
+        $headers = [
+            'Content-Type: application/json',
+            'Accept: application/json',
+            'Authorization: Bearer '.$access_token.'',
+            'scope : api_offresdemploiv2',
             'scope : application_'.$scope.''
-            //'Content-Type: application/json',
-            //'Accept: application/json'
-        );
+        ];
 
         // url modelization
-        $base_url = 'https://api.emploi-store.fr/partenaire/';
+        //$base_url = 'https://api.emploi-store.fr/partenaire/';
         $url = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique';
     
         curl_setopt($sh, CURLOPT_URL, $url);
         curl_setopt($sh, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($sh, CURLOPT_HEADER, 0);
-        curl_setopt($sh, CURL_HTTPGET, true);
     
         curl_setopt($sh, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($sh, CURLOPT_FOLLOWLOCATION, true);
