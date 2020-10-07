@@ -4,8 +4,14 @@
     function global_search_query($access_token){
 
         $ch = curl_init();
-        $headers = array('Content-Type: application/json');
-        $url = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search';
+        $headers = array(
+            'Content-Type: application/json',
+            'Accept: application/json',
+            'Authorization: Bearer '.$access_token.''
+        );
+
+        // url modelization
+        $url = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique';
     
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
