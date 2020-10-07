@@ -26,6 +26,8 @@
         $search_results = curl_exec($ch);
         print_r($ch);
         echo '--- <br>';
+        print_r($search_results);
+        echo '--- <br>';
         curl_close($ch);
         return $search_results;
     
