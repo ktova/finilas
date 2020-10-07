@@ -23,6 +23,7 @@
         // Return response
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         $search_results = curl_exec($ch);
+        print_r($ch);
         curl_close($ch);
         return $search_results;
     
