@@ -32,7 +32,7 @@ $response = $client->request('GET', 'https://api.emploi-store.fr/partenaire/offr
   ]
 ]);
 
-print_r($response->getStatusCode());
+//print_r($response->getStatusCode());
 echo '<br><br>';
 print_r($response->getReasonPhrase());
 
