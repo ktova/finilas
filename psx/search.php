@@ -5,12 +5,13 @@
 
         $ch = curl_init();
         $headers = array(
+            'Authorization: '.$access_token.'',
             'Content-Type: application/json',
-            'Accept: application/json',
-            //'Authorization: Bearer '.$access_token.''
+            'Accept: application/json'
         );
 
         // url modelization
+        $base_url = 'https://api.emploi-store.fr/partenaire/';
         $url = 'https://api.emploi-store.fr/partenaire/offresdemploi/v2/offres/search?qualification=0&motsCles=informatique';
     
         curl_setopt($ch, CURLOPT_URL, $url);
