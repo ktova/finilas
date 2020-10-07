@@ -16,6 +16,7 @@ include('psx/get_ref.php');
 $access_token = generate_access_token($creds['id'], $creds['secret']);
 $referentiel = generate_referentiel($access_token);
 
+print_r('acf: ' . $access_token);
 print_r($referentiel);
 
 ?>
